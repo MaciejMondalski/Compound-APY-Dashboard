@@ -19,12 +19,17 @@ const GlobalStyles = createGlobalStyle`
 .main-container {
 	display:flex;
 	justify-content: center; 
-	width: 100vw;
+	align-items: center;
+
 
 }
 
 .content-container {
-
+	display:flex;
+	flex-direction: column;
+	width: 70vw;
+	justify-content: center; 
+	align-items: center;
 }
 	`;
 

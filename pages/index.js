@@ -4,6 +4,9 @@ import calculateApy from "../apy.js";
 import GlobalStyles from "./GlobalStyles";
 import styled from "styled-components";
 
+//Components
+import Title from "./Title";
+
 export default function Home({ apys }) {
   const formatPercent = (number) =>
     `${new Number(number).toFixed(2)}%`;
@@ -12,7 +15,7 @@ export default function Home({ apys }) {
     <div className="main-container">
       <GlobalStyles />
       <div className="content-container">
-        <h1>Compound APY Dashboard</h1>
+        <Title />
         <table className="table">
           <thead>
             <tr>
@@ -53,8 +56,13 @@ export default function Home({ apys }) {
 export async function getServerSideProps(context) {
   const apys = await Promise.all([
     calculateApy(Compound.cDAI, "DAI"),
+    calculateApy(Compound.cETH, "ETH"),
     calculateApy(Compound.cUSDC, "USDC"),
     calculateApy(Compound.cUSDT, "USDT"),
+    calculateApy(Compound.cBAT, "BAT"),
+    calculateApy(Compound.cUNI, "UNI"),
+    calculateApy(Compound.cZRX, "ZRX"),
+    calculateApy(Compound.cCOMP, "COMP"),
   ]);
 
   return {
