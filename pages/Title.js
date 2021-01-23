@@ -1,9 +1,17 @@
+import styled from "styled-components";
+
 function Title() {
   return (
-    <div>
+    <StyledTitle>
       <h1>Compound APY Dashboard</h1>
-    </div>
+    </StyledTitle>
   );
 }
+
+const StyledTitle = styled.div`
+  height: 10vh;
+  display: flex;
+	align-items: center;
+`;
 
 export default Title;

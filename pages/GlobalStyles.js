@@ -7,7 +7,7 @@ const GlobalStyles = createGlobalStyle`
         box-sizing: border-box;
     }
     html{
-    background: white;
+    background: #F9FAFB;
 		font-family: "Roboto", sans-serif;
 		}
 	
