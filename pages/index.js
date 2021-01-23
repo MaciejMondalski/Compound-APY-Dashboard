@@ -76,7 +76,6 @@ const Asset = styled.td`
   display: flex;
   align-items: center;
 
-
   img {
     margin-right: 2rem;
   }
@@ -85,6 +84,7 @@ const Asset = styled.td`
 const StyledTable = styled.div`
   background: white;
   border-radius: 1rem;
+  box-shadow: 0.6rem 0.6rem 3rem 0.2rem grey;
 
   th,
   td {
@@ -93,6 +93,7 @@ const StyledTable = styled.div`
     text-overflow: ellipsis;
     white-space: nowrap;
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    text-align: center;
   }
 
   tbody {
@@ -103,12 +104,23 @@ const StyledTable = styled.div`
     }
   }
 
-  th {
-    position: sticky;
-    top: 0;
-    text-align: left;
-    font-weight: bold;
-    color: #7b8085;
-    font-size: 1.1rem;
+  thead {
+    tr {
+      position: sticky;
+      font-weight: bold;
+      color: white;
+      font-size: 1.1rem;
+      background: #070a0e;
+      overflow: visible;
+      border-top-left-radius: 1rem;
+    }
+
+    th:first-child {
+      border-top-left-radius: 1rem;
+    }
+
+    th:last-child {
+      border-top-right-radius: 1rem;
+    }
   }
 `;
