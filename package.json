@@ -2,14 +2,15 @@
   "name": "compound-dashboard",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build && next export",
-    "start": "next start"
+	"scripts": {
+    "dev": "next",
+    "build": "next build",
+    "postbuild": "next-on-netlify"
   },
   "dependencies": {
     "@compound-finance/compound-js": "^0.2.4",
     "next": "10.0.5",
+    "next-on-netlify": "^2.8.4",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "styled-components": "^5.2.1"
